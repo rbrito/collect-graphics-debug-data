@@ -55,4 +55,4 @@ dpkg -l xserver-xorg-video-radeon \
     linux-image-$(uname -r)	> userspace-packages.txt
 
 cd ..
-tar jcf $DIR.tar.bz2 $DIR
+tar --numeric-owner --group=root --owner=root -jcf $DIR.tar.bz2 $DIR
