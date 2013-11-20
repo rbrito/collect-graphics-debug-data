@@ -46,5 +46,7 @@ lshw				> lshw.txt
 mount -t debugfs none /sys/kernel/debug/
 tar cf debugfs-$DATE.tar /sys/kernel/debug
 
+LIBGL_DEBUG=verbose glxinfo	> glxinfo.txt 2>&1
+
 cd ..
 tar jcf $DIR.tar.bz2 $DIR
