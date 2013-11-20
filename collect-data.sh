@@ -48,5 +48,11 @@ tar cf debugfs-$DATE.tar /sys/kernel/debug
 
 LIBGL_DEBUG=verbose glxinfo	> glxinfo.txt 2>&1
 
+# About packages installed
+dpkg -l xserver-xorg-video-radeon \
+    libdrm2 libdrm-radeon1 \
+    mesa-utils libglu1-mesa libgl1-mesa-glx libgl1-mesa-dri libgl1-mesa-dri-experimental \
+    linux-image-$(uname -r)	> userspace-packages.txt
+
 cd ..
 tar jcf $DIR.tar.bz2 $DIR
