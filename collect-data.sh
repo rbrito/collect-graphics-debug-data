@@ -21,6 +21,7 @@ cd $DIR
 cp /boot/config-$KVER		.
 cp /var/log/Xorg.0.log		.
 
+cp /proc/cmdline		proc-cmdline.txt
 cp /proc/cpuinfo		proc-cpuinfo.txt
 cp /proc/interrupts		proc-interrupts.txt
 cp /proc/iomem			proc-iomem.txt
