@@ -44,8 +44,8 @@ lsmod				> lsmod.txt
 
 lshw				> lshw.txt
 
-mount -t debugfs none /sys/kernel/debug/
-tar cf debugfs-$DATE.tar /sys/kernel/debug
+#mount -t debugfs none /sys/kernel/debug/
+#tar cf debugfs-$DATE.tar /sys/kernel/debug
 
 LIBGL_DEBUG=verbose glxinfo	> glxinfo.txt 2>&1
 
