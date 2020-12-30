@@ -29,6 +29,7 @@ cp /proc/ioports		proc-ioports.txt
 
 uname -a			> uname-a.txt
 dmesg -s $((128 * 1024))	> $DATE-dmesg-$KVER.log
+dmesg -s $((128 * 1024)) --color=always	| aha > $DATE-dmesg-$KVER.html
 acpidump			> acpidump.txt
 dmidecode			> dmidecode.txt
 
