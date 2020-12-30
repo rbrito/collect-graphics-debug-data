@@ -50,10 +50,7 @@ lshw				> lshw.txt
 LIBGL_DEBUG=verbose glxinfo	> glxinfo.txt 2>&1
 
 # About packages installed
-dpkg -l xserver-xorg-video-radeon \
-    libdrm2 libdrm-radeon1 \
-    mesa-utils libglu1-mesa libgl1-mesa-glx libgl1-mesa-dri libgl1-mesa-dri-experimental \
-    linux-image-$(uname -r)	> userspace-packages.txt
+dpkg -l \*libdrm\* \*mesa\* linux-image-$(uname -r) | grep -v ^un > userspace-packages.txt
 
 cd ..
 tar --numeric-owner --group=root --owner=root -acf $DIR.tar.xz $DIR
